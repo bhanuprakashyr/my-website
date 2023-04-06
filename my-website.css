@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'MyWebsiteFont';
+    src: url('DancingScript-Regular.otf') format('truetype');
+  }
+
+  body {
+    font-family: 'MyWebsiteFont', sans-serif;
+  }
