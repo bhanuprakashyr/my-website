@@ -6,3 +6,7 @@
   body {
     font-family: 'MyWebsiteFont', sans-serif;
   }
+
+  #icon{
+    color: rgba(0,0,0,.9);
+  }
