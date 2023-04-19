@@ -17,15 +17,12 @@
     color: grey;
     align-self: center;
   }
-  
-  @media (max-width: 767px) {
-    .order-md-1 {
-      order: 1;
-    }
-    .order-md-2 {
-      order: 3;
-    }
-    .order-md-3 {
-      order: 2;
-    }
+
+  .sidebar-link.active{
+    font-size: x-large; 
+    font-weight: bold;
+    color: black;
+    align-self: center;
   }
+  
+  

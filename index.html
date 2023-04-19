@@ -10,6 +10,7 @@
   <title>prakashbhanu57</title>
   <link rel="stylesheet" type="text/css" href="my-website.css">
   <script src="https://kit.fontawesome.com/aa1ab23208.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -45,27 +46,41 @@
       <nav class="col-lg-2 border-2 bg-light d-print-none">
         <ul class="nav flex-column">
           <li class="nav-item m-2 bg-dark bg-opacity-10">
-            <a class="nav-link" href="www.google.com"> <span class="sidebar-link"> About </span> </a>
+            <a class="nav-link" href="#about" onclick="loadContent('about')"> <span class="sidebar-link active"> About </span> </a>
           </li>
           <li class="nav-item m-2 bg-dark bg-opacity-10">
-            <a class="nav-link" href="www.google.com"> <span class="sidebar-link"> Experience </span> </a>
+            <a class="nav-link" href="#experience" onclick="loadContent('experience')"> <span class="sidebar-link"> Experience
+              </span> </a>
           </li>
           <li class="nav-item m-2 bg-dark bg-opacity-10">
-            <a class="nav-link"> <span class="sidebar-link"> Skills </span> </a>
+            <a class="nav-link" href="#skills" onclick="loadContent('skills') "> <span class="sidebar-link"> Skills </span>
+            </a>
           </li>
           <li class="nav-item m-2 bg-dark bg-opacity-10">
-            <a class="nav-link"> <span class="sidebar-link"> Projects </span> </a>
+            <a class="nav-link" href="#projects" onclick="loadContent('projects')"> <span class="sidebar-link"> Projects </span>
+            </a>
           </li>
           <li class="nav-item m-2 bg-dark bg-opacity-10">
-            <a class="nav-link"> <span class="sidebar-link"> Certifications </span></a>
+            <a class="nav-link" href="#certifications" onclick="loadContent('certifications')"> <span class="sidebar-link">
+                Certifications </span></a>
           </li>
         </ul>
       </nav>
-      <main class="col-lg-auto flex-fill" role="main">
-        <div class="card">
-          <div class="card-body">
-            <p>Software developer with philosophy i love coding team building experimenting</p>
-          </div>
+      <main id="mainDiv" class="col-lg-auto flex-fill" role="main">
+        <div id="about" class="card">
+          <p>Software developer with philosophy i love coding team building experimenting</p>
+        </div>
+        <div id="experience" class="card bg-danger" style="display: none;">
+          <p>IG, Tech Mahindra</p>
+        </div>
+        <div id="skills" class="card bg-info" style="display: none;">
+          <p>Java Micro Service Project delivery</p>
+        </div>
+        <div id="projects" class="card bg-light" style="display: none;">
+          <p>Automated Bank Postings</p>
+        </div>
+        <div id="certifications" class="card bg-gradient" style="display: none;">
+          <p>Professional scrum master</p>
         </div>
       </main>
       <nav class="col-lg-3 border-2 bg-light">
@@ -77,5 +92,14 @@
       </nav>
     </div>
   </main>
+  <script type="text/javascript">
+    function loadContent(targetId) {
+      $('#mainDiv .card').hide();
+      $('.sidebar-link').removeClass('active');
+      $('#' + targetId).show();
+      $('a[href="#' + targetId + '"] .sidebar-link').addClass('active');
+    };
+  </script>
 </body>
+
 </html>
